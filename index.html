@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">STUDENT PRODUCTIVITY</p>
+      <h1>My To-Do List 📚</h1>
+      <p class="subtitle">Plan your day, one task at a time.</p>
+    </header>
+
+    <section class="stats" aria-label="Task summary">
+      <div class="stat"><span id="totalCount">0</span><small>Total tasks</small></div>
+      <div class="stat"><span id="doneCount">0</span><small>Completed</small></div>
+      <div class="stat"><span id="leftCount">0</span><small>Remaining</small></div>
+    </section>
+
+    <form id="taskForm" class="task-form">
+      <label class="sr-only" for="taskInput">New task</label>
+      <input id="taskInput" type="text" placeholder="e.g. Complete mathematics homework" maxlength="100" required>
+      <button type="submit">＋ Add task</button>
+    </form>
+
+    <div class="toolbar">
+      <h2>Today's tasks</h2>
+      <select id="filterSelect" aria-label="Filter tasks">
+        <option value="all">All tasks</option>
+        <option value="active">Remaining</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+    <p id="emptyMessage" class="empty">No tasks here yet. Add your first task above! ✨</p>
+    <footer>Small steps every day lead to big results. 🌱</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
